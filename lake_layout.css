@@ -1,0 +1,189 @@
+﻿@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 78th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Xie Zifan
+   Date: 2024/9/17
+   
+   Filename: lake_styles.css
+
+*/
+
+/* word settings*/
+a {
+	color: gray;
+}
+@font-face {
+	font-family: 'DobkinPlain';
+	src: url('DobkinPlain.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'cac_champagne';
+	src: url('cac_champagne.ttf') format('truetype');
+}
+/* Structural Styles */
+
+body {
+    margin: 0 auto;
+    max-width: 1020px;
+    min-width: 640px;
+	background-color: rgba(165, 192, 15, 0.854);
+    display: grid;
+    grid-template-columns: 70% 24%; /* left:70% right:24% */
+    grid-template-rows: auto 1fr auto; 
+    grid-template-areas: 
+        "header header"
+        "leftcol rightcol"
+        "footer footer";
+}
+
+/* Header Layout */
+header {
+    grid-area: header;
+}
+
+header > img {
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+/* Left Column Layout */
+#leftcol {
+	background-color: #0D0D0D;
+	color: #ffffff;
+    grid-area: leftcol;
+}
+
+/* Right Column Layout */
+#rightcol {
+	background-color:rgba(85, 23, 112, 0.95);
+    grid-area: rightcol;
+}
+
+/* Footer Layout */
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+/* General box-sizing for all elements */
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, ol, p, section, span, ul {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
+
+/* Header Navigation Styles */
+header nav ul {
+	background-color:rgba(110, 11, 156, 0.78);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* cut to 6 pieces */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    text-align: center;
+}
+
+header nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* Left Column Aside Styles */
+.special_1 {
+	font-family: 'cac_champagne';
+	font-size: 50px;
+	padding: 0 20px;
+	height: 20px;
+}
+.asides-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    margin-top: 20px;
+	height: auto;
+	align-items: start;
+}
+
+.asides-container h1 {
+    text-align: center;
+}
+
+/* leftpart */
+.leftpart {
+    background-color: rgb(206, 184, 116);
+	margin-left: 20px;
+}
+
+#leftcol aside a {
+	color:pink
+}
+
+/* Left Column Image Styles */
+#leftcol img {
+    width: 100%;
+    display: block;
+}
+
+#leftcol p{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* rightpart */
+.rightpart {
+    background-color: rgb(135	, 176, 200);
+    padding: 5px; 
+    margin-bottom: 20px;
+	margin-right: 60px;
+}
+
+/* Right Column Styles */
+#rightcol nav {
+	padding-left: 30px;
+    margin-bottom: 20px;
+}
+#rightcol nav h2 {
+	font-family: 'cac_champagne';
+	color:#ffffff;
+}
+#rightcol nav ul {
+	list-style-type: none;
+}
+
+#rightcol blockquote {
+	color:rgb(178, 16, 247);
+	font-family:Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    margin-top: 60px;
+}
+/* Set the quote */
+#rightcol blockquote:before { 
+    content: open-quote;
+    font-weight: bold;
+    font-size:20px;
+    color:rgb(178, 16, 247);
+} 
+#rightcol blockquote:after { 
+    content: close-quote;
+    font-weight: bold;
+    font-size:20px;
+    color:rgb(178, 16, 247);
+}
+
+/* Footer Styles */
+footer {
+    padding: 5px 0;
+    background-color: #3e2f0ea8;
+}

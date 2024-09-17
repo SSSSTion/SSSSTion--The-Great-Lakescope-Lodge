@@ -13,17 +13,25 @@
 */
 
 /* word settings*/
+
 a {
 	color: gray;
 }
+
+a:hover {
+	color:#333;
+}
+
 @font-face {
 	font-family: 'DobkinPlain';
 	src: url('DobkinPlain.ttf') format('truetype');
 }
+
 @font-face {
 	font-family: 'cac_champagne';
 	src: url('cac_champagne.ttf') format('truetype');
 }
+
 /* Structural Styles */
 
 body {
@@ -130,6 +138,10 @@ header nav a {
 	color:pink
 }
 
+#leftcol aside a:hover {
+	color:#333;
+}
+
 /* Left Column Image Styles */
 #leftcol img {
     width: 100%;
@@ -143,7 +155,7 @@ header nav a {
 
 /* rightpart */
 .rightpart {
-    background-color: rgb(135	, 176, 200);
+    background-color: rgb(135, 176, 200);
     padding: 5px; 
     margin-bottom: 20px;
 	margin-right: 60px;
